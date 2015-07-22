@@ -33,6 +33,10 @@ module.exports = function TokenMatcher() {
     return matchTitleLine(token, 'ExamplesLine', dialect.examples);
   };
 
+  this.match_DashedLine = function match_DashedLine(token) {
+    return false;
+  };
+
   this.match_TableRow = function match_TableRow(token) {
     if (token.line.startsWith('|')) {
       // TODO: indent
